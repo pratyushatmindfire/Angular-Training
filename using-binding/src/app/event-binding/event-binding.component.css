@@ -1,0 +1,16 @@
+#square
+{
+    background-color: cadetblue;
+    width: min-content;
+    text-align: center;
+    padding: 2vw;
+    cursor: pointer;
+    color: white;
+    font-size: 5em;
+    font-family: sans-serif;
+}
+
+p
+{
+    font-size:2em;
+}

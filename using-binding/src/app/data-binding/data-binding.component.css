@@ -1,0 +1,19 @@
+#highlightedSpan
+{
+    background-color: blueviolet;
+    color: white;
+    margin-left:8px;
+    padding: 6px;
+    font-family: system-ui;
+    letter-spacing: 0.2em;
+}
+
+p
+{
+    font-size:2em;
+}
+
+input
+{
+    font-size: larger;
+}
