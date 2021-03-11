@@ -1,13 +1,27 @@
 #square
-{
-    background-color: cadetblue;
+{   
     width: min-content;
     text-align: center;
     padding: 2vw;
     cursor: pointer;
-    color: white;
     font-size: 5em;
     font-family: sans-serif;
+}
+
+.indigo
+{
+    color: white;
+    background-color: cadetblue;
+}
+
+.darkred
+{
+    background-color: rgb(170, 0, 0);
+}
+
+.lightgreen
+{
+    background-color: greenyellow;
 }
 
 p

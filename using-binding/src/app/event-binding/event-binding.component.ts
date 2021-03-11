@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class EventBindingComponent implements OnInit {
 
   counterValue=0;
+  public flagColor='lightgreen';
 
   incrementCounter()
   {

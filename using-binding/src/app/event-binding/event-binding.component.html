@@ -1,2 +1,5 @@
 <p>Click below on the box to increase its value by 1</p>
-<div id="square" (click)='incrementCounter();'>{{counterValue}}</div>
+<div id="square" class="indigo" (click)='incrementCounter();'>{{counterValue}}</div>
+
+<p>The box below turns green if the box above has a value divisible by 3</p>
+<div id="square"  [ngClass]="{'lightgreen': counterValue%3==0, 'darkred': counterValue%3!==0}" (click)='incrementCounter();'>{{counterValue}}</div>
