@@ -1,0 +1,17 @@
+<p>Editing Task</p>
+<form [formGroup]="taskEditForm" (ngSubmit)="submitEdit()">
+    
+    <input type="text" class="form-control" id="title"
+    formControlName="editTitle" minlength="4"> 
+    
+    <input type="text" class="form-control" id="author"
+    formControlName="editAuthor" minlength="4"> 
+    
+    <select class="form-control" id="priority" formControlName="editPriority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+    </select>
+
+    <button type="submit">Save</button>
+</form>

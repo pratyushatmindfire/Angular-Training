@@ -1,0 +1,7 @@
+<br>
+<div class="todoContainer">
+  <span class="singleLine text-centeralign todoHeader">Your Tasks</span>
+  <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+    <app-singletask *ngFor="let eachTask of localtaskList" [taskObject]="eachTask"></app-singletask>
+  </div>
+</div>
