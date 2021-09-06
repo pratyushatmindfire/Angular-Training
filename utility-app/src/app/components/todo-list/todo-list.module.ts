@@ -13,10 +13,12 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { PopupEdittaskComponent } from './popup-edittask/popup-edittask.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PopupDeletetaskComponent } from './popup-deletetask/popup-deletetask.component';
+import { TaskOverviewComponent } from './popup-deletetask/task-overview/task-overview.component';
+import { PopupAddtaskComponent } from './popup-addtask/popup-addtask.component';
 
 @NgModule({
   imports: [CommonModule, TodoListRoutingModule, MatListModule, DragDropModule, MatIconModule, MatButtonModule, MatDialogModule, FormsModule, ReactiveFormsModule],
-  declarations: [TodoListComponent, SingleTaskComponent, PriorityTagComponent, PopupEdittaskComponent, PopupDeletetaskComponent],
+  declarations: [TodoListComponent, SingleTaskComponent, PriorityTagComponent, PopupEdittaskComponent, PopupDeletetaskComponent, TaskOverviewComponent, PopupAddtaskComponent],
   providers: [StorageService]
 })
 export class TodoListModule {}

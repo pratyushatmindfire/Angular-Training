@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-popup-deletetask',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopupDeletetaskComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(MAT_DIALOG_DATA) public taskData, private storageService: StorageService, public dialogRef: MatDialogRef<PopupDeletetaskComponent>) { }
 
   ngOnInit(): void {
+  }
+
+  closeDeleteDialogue()
+  {
+    this.dialogRef.close();
+  }
+
+  deleteTask()
+  {
+    console.log("Delete from popup delete task", this.taskData.taskId);
+    this.storageService.deleteTaskById(this.taskData.taskId);
+    this.dialogRef.close();
   }
 
 }
