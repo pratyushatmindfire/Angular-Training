@@ -1,6 +1,6 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import { Component, OnInit, Optional } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
+import { FormControl, FormGroup, Validators} from '@angular/forms';
 import { StorageService } from '../../../services/storage.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { StorageService } from '../../../services/storage.service';
 export class PopupAddtaskComponent implements OnInit {
   taskCreateForm: FormGroup;
   
-  constructor(private storageService: StorageService, public dialogRef: MatDialogRef<PopupAddtaskComponent>) { }
+  constructor(private storageService: StorageService, @Optional() public dialogRef: MatDialogRef<PopupAddtaskComponent>) { }
   
   ngOnInit(): void {
     this.taskCreateForm = new FormGroup({

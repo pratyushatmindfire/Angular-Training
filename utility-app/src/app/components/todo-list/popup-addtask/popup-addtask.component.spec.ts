@@ -19,7 +19,8 @@ describe('PopupAddtaskComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should contain validation concerns for invalid form control values', () => {
+    component.taskCreateForm.setValue({createTitle: "Inv", createAuthor: "Inv", createPriority: "High"});
+    expect(Object.keys(component.getControl.createTitle.errors).length>0).toBe(true);
   });
 });

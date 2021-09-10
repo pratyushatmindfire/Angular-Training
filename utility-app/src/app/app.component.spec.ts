@@ -30,6 +30,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('utility-app app is running!');
+    expect(compiled.querySelectorAll('app-header-bar').length===1).toBe(true);
   });
 });
